@@ -1,6 +1,8 @@
 package FlyweightFiles;
 
-public class CharacterProperties {
+import java.io.Serializable;
+
+public class CharacterProperties implements Serializable {
 
     private final String font;
     private final String color;

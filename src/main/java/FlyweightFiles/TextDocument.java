@@ -1,9 +1,10 @@
 package FlyweightFiles;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class TextDocument {
+public class TextDocument implements Serializable {
 
     private final List<Character> characters;
 
@@ -14,6 +15,7 @@ public class TextDocument {
     public void addCharacter(char value, String font,
                              String color, int size) {
         CharacterProperties properties = new CharacterProperties(font, color, size);
+        CharacterPropertiesFactory.getCharacterProperties(font, color, size);
 
         characters.add(new Character(value, properties));
     }

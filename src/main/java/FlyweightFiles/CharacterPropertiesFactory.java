@@ -29,4 +29,8 @@ public class CharacterPropertiesFactory {
         return propertiesMap.size();
     }
 
+    public static void clearForTesting() {
+        propertiesMap.clear();
+    }
+
 }
